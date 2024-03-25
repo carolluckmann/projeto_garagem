@@ -10,9 +10,10 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from core.views import UserViewSet
+from core.views import AcessorioViewSet 
 
 router = DefaultRouter()
-
+router.register(r"acessorios", AcessorioViewSet, basename="acessorios")
 router.register(r"users", UserViewSet, basename="users")
 
 urlpatterns = [
